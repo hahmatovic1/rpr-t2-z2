@@ -42,17 +42,16 @@ public class Interval {
             presjek = new Interval(interval.pocetnaTacka, interval.krajnjaTacka, true, true);
     }
 
-    /*
-    public static Interval(Interval i1, Interval i2){
+
+    public static Interval intersect(Interval i1, Interval i2){
         Interval presjek = new Interval();
-        if(i1.krajnjaTacka == interval.pocetnaTacka || interval.krajnjaTacka == i1.pocetnaTacka)
+        if(i1.krajnjaTacka == i2.pocetnaTacka || i2.krajnjaTacka == i1.pocetnaTacka)
             return presjek;
-        if(i1`.krajnjaTacka <= interval.pocetnaTacka)
-            presjek = new Interval(this.pocetnaTacka, interval.krajnjaTacka, true, true);
+        if(i1.krajnjaTacka <= i2.pocetnaTacka)
+            presjek = new Interval(i1.pocetnaTacka, i2.krajnjaTacka, true, true);
         else
-            presjek = new Interval(interval.pocetnaTacka, interval.krajnjaTacka, true, true);
+            presjek = new Interval(i2.pocetnaTacka, i2.krajnjaTacka, true, true);
     }
-    }
-     */
+
 
 }
