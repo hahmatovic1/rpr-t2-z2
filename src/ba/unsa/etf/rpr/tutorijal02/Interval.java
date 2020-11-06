@@ -32,4 +32,15 @@ public class Interval {
         return false;
     }
 
+    public Interval intersect(Interval interval){
+        Interval presjek = new Interval();
+        if(this.krajnjaTacka == interval.pocetnaTacka || interval.krajnjaTacka == this.pocetnaTacka)
+            return presjek;
+        if(this.krajnjaTacka <= interval.pocetnaTacka)
+            presjek = new Interval(this.pocetnaTacka, interval.krajnjaTacka, true, true);
+        else
+            presjek = new Interval(interval.pocetnaTacka, interval.krajnjaTacka, true, true);
+    }
+
+
 }
