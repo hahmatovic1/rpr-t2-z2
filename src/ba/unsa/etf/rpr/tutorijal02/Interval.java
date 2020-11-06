@@ -34,7 +34,7 @@ public class Interval {
 
     public Interval intersect(Interval interval){
         Interval presjek = new Interval();
-        if(this.krajnjaTacka == interval.pocetnaTacka || interval.krajnjaTacka == this.pocetnaTacka)
+        if(this.krajnjaTacka < interval.pocetnaTacka || interval.krajnjaTacka < this.pocetnaTacka)
             return presjek;
         if(this.krajnjaTacka <= interval.pocetnaTacka)
             presjek = new Interval(this.pocetnaTacka, interval.krajnjaTacka, true, true);
@@ -42,5 +42,17 @@ public class Interval {
             presjek = new Interval(interval.pocetnaTacka, interval.krajnjaTacka, true, true);
     }
 
+    /*
+    public static Interval(Interval i1, Interval i2){
+        Interval presjek = new Interval();
+        if(i1.krajnjaTacka == interval.pocetnaTacka || interval.krajnjaTacka == i1.pocetnaTacka)
+            return presjek;
+        if(i1`.krajnjaTacka <= interval.pocetnaTacka)
+            presjek = new Interval(this.pocetnaTacka, interval.krajnjaTacka, true, true);
+        else
+            presjek = new Interval(interval.pocetnaTacka, interval.krajnjaTacka, true, true);
+    }
+    }
+     */
 
 }
